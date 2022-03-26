@@ -1,15 +1,12 @@
 import SignMessage from "./components/SignMessage";
-import VerifyMessage from "./components/VerifyMessage";
+import Explanation from "./components/Explanation";
+import "./App.css";
 
 export default function App() {
   return (
-    <div className="flex flex-wrap">
-      <div className="w-full lg:w-1/2">
-        <SignMessage />
-      </div>
-      {/* <div className="w-full lg:w-1/2">
-        <VerifyMessage />
-      </div> */}
+    <div className="App">
+      <Explanation/>
+      <SignMessage />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { ethers } from "ethers";
 import ErrorMessage from "./ErrorMessage";
+import "../App.css";
 
 const signMessage = async ({ setError, message }) => {
   try {
@@ -43,17 +44,11 @@ export default function SignMessage() {
   };
 
   return (
-    <form className="m-4" onSubmit={handleSign}>
-      <div className="credit-card w-full shadow-lg mx-auto rounded-xl bg-white">
-        <main className="mt-4 p-4">
-          <h1 className="text-xl font-semibold text-gray-700 text-center">
-            Sign messages
-          </h1>
-        </main>
-        <footer className="p-4">
+    <form className="form" onSubmit={handleSign}>
+      <div>
+        <footer>
           <button
-            type="submit"
-            className="btn btn-primary submit-button focus:ring focus:outline-none w-full"
+            type="submit" className="sign-button"
           >
             Sign message
           </button>
@@ -63,11 +58,11 @@ export default function SignMessage() {
           return (
             <div className="p-2" key={sig}>
               <div className="my-3">
-                <p>
-                  Message {idx + 1}: {sig.message}
+                <p className="text">
+                  Message: {sig.message}
                 </p>
-                <p>Signer: {sig.address}</p>
-                <p>Signature ID: {sig.signature}</p>
+                <p className="text" >Signer: {sig.address}</p>
+                <p className="text" >Signature ID: {sig.signature}</p>
               </div>
             </div>
           );
