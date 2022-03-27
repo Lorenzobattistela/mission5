@@ -56,14 +56,15 @@ export default function SignMessage() {
         </footer>
         {signatures.map((sig, idx) => {
           return (
-            <div className="p-2" key={sig}>
-              <div className="my-3">
-                <p className="text">
-                  Message: {sig.message}
-                </p>
-                <p className="text" >Signer: {sig.address}</p>
-                <p className="text" >Signature ID: {sig.signature}</p>
-              </div>
+            <div className="modal" itemID="myModal">
+                <div className="modal-content">
+                    <p className="modal-text">
+                      Mensagem:  <strong>{sig.message}</strong>
+                    </p>
+                    <p className="modal-text" >Endereço assinante:  <strong>{sig.address}</strong></p>
+                    <p className="modal-text" >ID da assinatura:  <strong>{sig.signature}</strong></p>
+                    <p className="modal-text">Para receber sua recompensa da missão 5, envie o ID da assinatura no canal do discord!</p>
+                </div>
             </div>
           );
         })}
