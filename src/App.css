@@ -40,10 +40,13 @@
 .text{
   color: rgb(207, 188, 188);
   font-size: 1.2rem;
+  text-align: justify;
+  line-height: 2rem;
 }
 
 .title{
-  font-size: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 body {
