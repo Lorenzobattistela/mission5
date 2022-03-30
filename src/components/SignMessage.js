@@ -50,7 +50,7 @@ export default function SignMessage() {
           <button
             type="submit" className="sign-button"
           >
-            Sign message
+            Login
           </button>
           <ErrorMessage message={error} />
         </footer>
